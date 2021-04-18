@@ -51,7 +51,7 @@ const questions = {
   engineerQuestions: [
     {
       type: "input",
-      name: "engineerName",
+      name: "name",
       message: "What is your engineer's name?",
       validate: (answer) => {
         if (answer !== "") {
@@ -62,7 +62,7 @@ const questions = {
     },
     {
       type: "input",
-      name: "engineerId",
+      name: "id",
       message: "What is your engineer's id?",
       validate: (answer) => {
         const pass = answer.match(/^[1-9]\d*$/);
@@ -78,7 +78,7 @@ const questions = {
     },
     {
       type: "input",
-      name: "engineerEmail",
+      name: "email",
       message: "What is your engineer's email?",
       validate: (answer) => {
         const pass = answer.match(/\S+@\S+\.\S+/);
@@ -90,7 +90,7 @@ const questions = {
     },
     {
       type: "input",
-      name: "engineerGithub",
+      name: "github",
       message: "What is your engineer's GitHub username?",
       validate: (answer) => {
         if (answer !== "") {
@@ -100,7 +100,7 @@ const questions = {
       },
     },
   ],
-  interQuestions: [
+  internQuestions: [
     {
       type: "input",
       name: "internName",
