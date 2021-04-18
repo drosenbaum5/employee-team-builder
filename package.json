@@ -21,7 +21,8 @@
   },
   "homepage": "https://github.com/drosenbaum5/employee-team-builder#readme",
   "dependencies": {
-    "inquirer": "^8.0.0"
+    "inquirer": "^8.0.0",
+    "uuid": "^8.3.2"
   },
   "devDependencies": {
     "jest": "^26.6.3"

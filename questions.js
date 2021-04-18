@@ -1,4 +1,5 @@
 const questions = {
+  idArray: [],
   managerQuestions: [
     {
       type: "input",
@@ -67,7 +68,7 @@ const questions = {
       validate: (answer) => {
         const pass = answer.match(/^[1-9]\d*$/);
         if (pass) {
-          if (idArray.includes(answer)) {
+          if (questions.idArray.includes(answer)) {
             return "This ID is already taken. Please enter a different number.";
           } else {
             return true;
@@ -103,7 +104,7 @@ const questions = {
   internQuestions: [
     {
       type: "input",
-      name: "internName",
+      name: "name",
       message: "What is your intern's name?",
       validate: (answer) => {
         if (answer !== "") {
@@ -114,12 +115,12 @@ const questions = {
     },
     {
       type: "input",
-      name: "internId",
+      name: "id",
       message: "What is your intern's id?",
       validate: (answer) => {
         const pass = answer.match(/^[1-9]\d*$/);
         if (pass) {
-          if (idArray.includes(answer)) {
+          if (questions.idArray.includes(answer)) {
             return "This ID is already taken. Please enter a different number.";
           } else {
             return true;
@@ -130,7 +131,7 @@ const questions = {
     },
     {
       type: "input",
-      name: "internEmail",
+      name: "email",
       message: "What is your intern's email?",
       validate: (answer) => {
         const pass = answer.match(/\S+@\S+\.\S+/);
@@ -142,7 +143,7 @@ const questions = {
     },
     {
       type: "input",
-      name: "internSchool",
+      name: "school",
       message: "What is your intern's school?",
       validate: (answer) => {
         if (answer !== "") {
@@ -159,7 +160,7 @@ const questions = {
       message: "Which type of team member would you like to add?",
       choices: ["Engineer", "Intern", "I don't want to add any more team members"],
     },
-  ]
+  ],
 };
 
 module.exports = questions;
